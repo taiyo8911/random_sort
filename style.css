@@ -1,0 +1,37 @@
+body{
+    background-color: #EFEFEF;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.rule{
+    background-color: beige;
+    color: black;
+}
+
+.rule p{
+    font-size: 20px;
+}
+
+p{
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#result{
+    display: none;
+}
+
+.back-blue{
+    background-color: powderblue;
+}
+
+.fz-35{
+    font-size: 35px;
+}
