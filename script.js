@@ -1,4 +1,4 @@
-function calc() {
+function shuffleNumber() {
   //フォームから特認と一般の人数を抽出する
   var firstNum = document.getElementById("first").value;
   var secondNum = document.getElementById("second").value;
@@ -59,6 +59,6 @@ function calc() {
   $('#result').show();
   $('#clearBtn').show();
 
-  $('#main').hide();
+  $('#top').hide();
 
 }

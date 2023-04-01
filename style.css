@@ -1,37 +1,24 @@
-body{
-    background-color: #EFEFEF;
+body {
+    background-color: #efefef;
 }
 
-.container{
-    width: 90%;
+.container {
+    max-width: 700px;
     margin: 0 auto;
 }
 
-.rule{
-    background-color: beige;
-    color: black;
+.rule p {
+    font-size: 1rem;
 }
 
-.rule p{
-    font-size: 20px;
-}
-
-p{
+p {
     font-size: 30px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-#result{
-    display: none;
-}
-
-.back-blue{
+.back-blue {
     background-color: powderblue;
-}
-
-.fz-35{
-    font-size: 35px;
 }

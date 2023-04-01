@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
-        <title>ランダム並び替えアプリ</title>
-        <link rel="stylesheet" href="style.css"/>
-    </head>
 
-    <body>
-      <header class="container">
-        <a href=""><h1>ランダム並び替えアプリ</h1></a>
-      </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>順番決めアプリ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </head>
 
-      <div class="container" id="main">
-          <div class="rule">
-            <p>数字をランダムに並び替えて表示します。</p>
-            <p>数字を半角文字で入力して、抽選ボタンを押して下さい。</p>
-          </div>
-          <hr>
-          <p>優先テーブル：<input type ="number" id ="first" min="0" max="10"></p>
-          <p>一般テーブル：<input type ="number" id ="second" min="0" max="10"></p>
-          <button onclick ="calc()">抽選する</button>
+  <body>
+    <header class="container">
+      <a href="">
+        <h1>順番決めアプリ</h1>
+      </a>
+    </header>
+
+    <div id="top" class="container">
+      <div class="rule">
+        <p>ランダムな順番を決めるためのアプリです。<br>数字を半角で入力し、ボタンを押して下さい。</p>
       </div>
+      <p>人数：<input type="number" id="number" min="2"></p>
+      <button id="btn-shuffle">ボタン</button>
+    </div>
 
-      <div class="container" id="result">
-          <p class="back-blue">優先の順番</p>
-          <p id="es6" class="fz-35"></p>
-          <p class="back-blue">一般の順番</p>
-          <p id="es7" class="fz-35"></p>
-          <button onclick="window.location.reload(true)" id="clearBtn">戻る</button>
-      </div>
+    <div id="result_display" class="container">
+      <p class="back-blue">結果</p>
+      <p id="result"></p>
+      <button id="btn-clear">戻る</button>
+    </div>
 
-      <script src="script.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script> -->
-      <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
+    <script src="main.js"></script>
 
-    </body>
+    <script>
+      // 読み込み時、結果は非表示
+      const resultContainer = document.getElementById("result_display");
+      resultContainer.style.display = "none";
+
+      // ボタンが押された時
+      const btnShuffle = document.getElementById("btn-shuffle");
+      btnShuffle.addEventListener("click", shuffledNumbersTable);
+
+      // 戻るボタンが押された時
+      const btnClear = document.getElementById("btn-clear");
+      btnClear.addEventListener("click", function () {
+        window.location.reload(true);
+      });
+    </script>
+
+
+  </body>
+
 </html>
