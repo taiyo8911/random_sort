@@ -2,11 +2,6 @@ body {
     background-color: #efefef;
 }
 
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
 .rule p {
     font-size: 1rem;
 }
